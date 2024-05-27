@@ -53,7 +53,7 @@ quantized models used for llama3 and Phi3 are probably not up to the task - even
 
 ## Running project examples
 
-You may want to create a virtual python environment using ```venv`` or ```Pipenv```.
+You may want to create a virtual python environment using ```venv``` or ```Pipenv```.
 
 * Install the dependencies: ```pip3 install -r requirements.txt```
 * Get the spacy model: ```python3 -m spacy download en_core_web_lg```
