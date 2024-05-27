@@ -1,0 +1,162 @@
+[
+  {
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hello, I would like to know the recent transactions on my account. My account number is 6543210-0 and my name is Sarah Green. You can contact me at sarahg@yahoo.com or (444) 678-1234."
+  },
+  {
+    "category": "NEW_ACCOUNT",
+    "email_text": "Hi there, I am interested in opening a savings account with your bank. My name is Tom Hanks and my social security number is 321-54-6789. Please let me know the initial deposit requirements. My phone number is (311) 567-8976."
+  },
+  {
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Good day, I wish to update my contact information. My current email is janetdoe@gmail.com and I would like to change it to janetdonew@gmail.com. My account number is 789123450."
+  },
+  {
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Greetings, I would like to deposit $5,000 into my account. My account number is 11235813 and my name is Fibonacci Sequence. I can be reached at fibonaccis@math.com, phone (555) 123-9876."
+  },
+  {
+    "category": "UNKNOWN",
+    "email_text": "Can you tell me why the sky is blue? Regards, Charlie."
+  },
+  {
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hello, I need to know the available balance in my checking account. My account number is 1357911 and my name is Toby Fox. You can send the details to tobyf@undertale.com."
+  },
+  {
+    "category": "NEW_ACCOUNT",
+    "email_text": "Dear Bank, I want to open a business account for my startup. Name: Code Solutions LLC, initial deposit: $150,000. Contact person: Emily Blunt, SSN: 234-56-7890, Phone: 888-654-3210."
+  },
+  {
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "To whom it may concern, I have moved to a new address and need to update my information. My account number is 908171614 and my name is Amanda G. New address: 1234 Elm Street, Springfield. My phone is 999-876-5432."
+  },
+  {
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Good morning, please withdraw $2,000 from my account and transfer it to account number 1122334455. My account number is 99887766 and my name is Samuel Chase. Contact: samchase@finance.com."
+  },
+  {
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "I forgot my password and now I'm stuck in a loop. Help! Regards, Alex."
+  },
+  {
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hi, could you provide me with a mini statement for my account? My account number is 741852963 and my name is Mia Wilcox. You can email it to miawilcox@outlook.com."
+  },
+  {
+    "category": "NEW_ACCOUNT",
+    "email_text": "Hello, I would like to open a joint account with my spouse. Our names are John and Jane Dean. Initial deposit: $50,000. John’s phone: 456-789-1230, Jane’s phone: 456-789-1231."
+  },
+  {
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Dear Support, I need to update my phone number in your records. My account number is 6547291, name: Leo King. New phone number is (234) 678-8901."
+  },
+  {
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Hi, I'd like to make a deposit of $10,000 into my savings account. My account number is 22446688, name: Martha Zane. Email me at marthaz@gmail.com for confirmation."
+  },
+  {
+    "category": "UNKNOWN",
+    "email_text": "The quick brown fox jumps over the lazy dog. Regards, Typist."
+  },
+  {
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hello, can you email me the interest rates on my current savings account? My account number is 888555333, name: Henry Roberts. Email: hroberts@yahoo.com."
+  },
+  {
+    "category": "NEW_ACCOUNT",
+    "email_text": "Hi, I'm looking to open a fixed deposit account. For Edwin Lawrence, SSN: 531-33-1784. My phone number is (321) 987-6543. Thank you."
+  },
+  {
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Hello, I need to change the beneficiary on my account. Current beneficiary: Rebecca Jones, new beneficiary: Robert Jones. Account number: 558899007. My name: Max Power."
+  },
+  {
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Can you please transfer $500 from my account to account number 3344556677? My account number is 111222333 and my name is Oliver Twist. Email: otwist@gmail.com."
+  },
+  {
+    "category": "UNKNOWN",
+    "email_text": "Yesterday is history, tomorrow is a mystery, today is a gift. Best, Wise One."
+  },
+  {
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hello, I need to know the recent transactions on my account number 88222333. My name is Sarah Perkins, email sarahp@gmail.com, and phone number (407) 555-7890."
+},
+{
+    "category": "NEW_ACCOUNT",
+    "email_text": "Greetings, I am interested in opening a new savings account. My name is Paul Simmons, SSN 234-56-7890, and my contact number is (315) 555-6543."
+},
+{
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Hi, I recently moved and need to update my address to 123 Maple St, Seattle, WA 98101. My account number is 7654321, and my name is Alice Johnson."
+},
+{
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Dear Bank, I would like to deposit $5,000 into my account. Account number 567890123, Name: Mark Davis, email: mdavis@mail.com, phone: (614) 555-9987."
+},
+{
+    "category": "UNKNOWN",
+    "email_text": "Can you help me decode the mysterious message in my dreams?"
+},
+{
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hi, Can you provide the current balance for account number 11223344? My name is James Trent, and my contact email is jtrent123@gmail.com. Phone: (503) 555-3838."
+},
+{
+    "category": "NEW_ACCOUNT",
+    "email_text": "Hello, I need to open a new business account for my company. My name is Laura Kingsley, SSN 321-54-6789, and phone number (408) 555-1215."
+},
+{
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Dear Support, I need to update my contact email to newemail@provider.com. My current email is myoldemail@provider.com, and my account number is 123789456. Name: Clara Ruiz."
+},
+{
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Hello, I need to transfer $10,000 from my account number 987654321 to account number 123456789. My name is Jason Gray, email jasong@mail.com, phone (206) 555-1212."
+},
+{
+    "category": "UNKNOWN",
+    "email_text": "Why does the sun rise in the east and set in the west, eh?"
+},
+{
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Dear Sir/Madam, Could you please confirm the current interest rate on my savings account? My account number is 456789123, and my name is Emma Clark. Contact email is eclark@mail.com."
+},
+{
+    "category": "NEW_ACCOUNT",
+    "email_text": "Hi, I'm interested in setting up a joint account with my spouse. Our names are Robert and Julia Turner, and our social security numbers are 789-45-1234 and 789-45-6789. Phone (206) 555-6789."
+},
+{
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Hello, I need to change my phone number to (408) 555-4545. My account number is 654321098, and my name is David Brown. Thanks."
+},
+{
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "I would like to withdraw $200 from my checking account. Account number: 2233445566. Name: Grace Lee. Email: gracelee@mail.com."
+},
+{
+    "category": "UNKNOWN",
+    "email_text": "Is it possible to travel faster than light?"
+},
+{
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "Hi, I need a detailed statement of all transactions for October for account number 9988776655. My name is Michael Jordan, email mjordan@gmail.com, phone (408) 555-7890."
+},
+{
+    "category": "NEW_ACCOUNT",
+    "email_text": "Greetings, I'd like to open a new account with an initial deposit of $50,000. My name is Tina Roberts, SSN 555-55-5555, and phone (315) 555-4321."
+},
+{
+    "category": "UPDATE_ACCOUNT",
+    "email_text": "Good Day, I would like to update the name on my account to Peter Wheeler. My current account number is 987654321, formerly known as Peter Whitman."
+},
+{
+    "category": "ACCOUNT_TRANSACTION",
+    "email_text": "Hello, I need to deposit $15,000 to my account. Account number 5566778899, Name: Lisa Chen, contact email lisachen@mail.com, phone (614) 555-1122."
+},
+{
+    "category": "UNKNOWN",
+    "email_text": "Can cats and dogs communicate with each other?"
+}
+]

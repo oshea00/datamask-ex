@@ -1,0 +1,436 @@
+Supported entities: ['PERSON', 'ORGANIZATION', 'EMAIL_ADDRESS', 'CREDIT_CARD', 'US_SSN', 'AU_ABN', 'IN_AADHAAR', 'US_DRIVER_LICENSE', 'US_PASSPORT', 'AU_TFN', 'US_BANK_NUMBER', 'EMAIL', 'PHONE_NUMBER', 'IN_PAN', 'URL', 'CRYPTO', 'AU_ACN']
+--------------------------------------------------
+Email: Hello, I would like to know the recent transactions on my account. My account number is 6543210-0 and my name is Sarah Green. You can contact me at sarahg@yahoo.com or (444) 678-1234.
+Masked: Hello, I would like to know the recent transactions on my account. My account number is <US_DRIVER_LICENSE>-0 and my name is <PERSON>. You can contact me at <EMAIL_ADDRESS> or <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The email is a request for recent transaction details on an account. The sender provides their account number, name, and contact information including email and phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi there, I am interested in opening a savings account with your bank. My name is Tom Hanks and my social security number is 321-54-6789. Please let me know the initial deposit requirements. My phone number is (311) 567-8976.
+Masked: Hi there, I am <IN_PAN> in opening a savings account with your bank. My name is <PERSON> and my social security number is <US_SSN>. Please let me know the initial deposit requirements. My phone number is (311) 567-8976.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The email sender is interested in opening a savings account and has provided their name, social security number, and phone number. They are requesting information on the initial deposit requirements.
+Correctly categorized: True
+--------------------------------------------------
+Email: Good day, I wish to update my contact information. My current email is janetdoe@gmail.com and I would like to change it to janetdonew@gmail.com. My account number is 789123450.
+Masked: Good day, I wish to update my contact information. My current email is <EMAIL_ADDRESS> and I would like to change it to <EMAIL_ADDRESS>. My account number is <AU_TFN>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The sender wishes to update their contact information. They want to change their current email address to a new one and have provided their account number for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Greetings, I would like to deposit $5,000 into my account. My account number is 11235813 and my name is Fibonacci Sequence. I can be reached at fibonaccis@math.com, phone (555) 123-9876.
+Masked: Greetings, I would like to deposit $5,000 into my account. My account number is <US_BANK_NUMBER> and my name is Fibonacci Sequence. I can be reached at <EMAIL_ADDRESS>, phone <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email is a request from Fibonacci Sequence to deposit $5,000 into their account. They have provided their account number, email address, and phone number for further contact.
+Correctly categorized: True
+--------------------------------------------------
+Email: Can you tell me why the sky is blue? Regards, Charlie.
+Masked: Can you tell me why the sky is blue? <PERSON>, <PERSON>.
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: Sure! The email is asking for an explanation of why the sky is blue, addressed to two people.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to know the available balance in my checking account. My account number is 1357911 and my name is Toby Fox. You can send the details to tobyf@undertale.com.
+Masked: Hello, I need to know the available balance in my checking account. My account number is <US_DRIVER_LICENSE> and my name is <PERSON>. You can send the details to <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The email requests the available balance for a checking account. The sender provides their account number, name, and a contact email address for the response.
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Bank, I want to open a business account for my startup. Name: Code Solutions LLC, initial deposit: $150,000. Contact person: Emily Blunt, SSN: 234-56-7890, Phone: 888-654-3210.
+Masked: Dear Bank, I want to open a business account for my startup. Name: Code Solutions LLC, initial deposit: $150,000. Contact person: <PERSON>, SSN: <US_SSN>, Phone: <PHONE_NUMBER>.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The sender is requesting to open a business account for their startup, Code Solutions LLC, with an initial deposit of $150,000. They have provided contact details, including the name of the contact person, their SSN, and a phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: To whom it may concern, I have moved to a new address and need to update my information. My account number is 908171614 and my name is Amanda G. New address: 1234 Elm Street, Springfield. My phone is 999-876-5432.
+Masked: To whom it may concern, I have moved to a new address and need to update my information. My account number is <US_BANK_NUMBER> and my name is <PERSON> address: 1234 Elm Street, Springfield. My phone is <PHONE_NUMBER>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The sender has moved to a new address and needs to update their information. They provided their account number, name, new address (1234 Elm Street, Springfield), and phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Good morning, please withdraw $2,000 from my account and transfer it to account number 1122334455. My account number is 99887766 and my name is Samuel Chase. Contact: samchase@finance.com.
+Masked: Good morning, please withdraw $2,000 from my account and transfer it to account number <PHONE_NUMBER>. My account number is <US_BANK_NUMBER> and my name is <PERSON>. Contact: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The sender requests a withdrawal of $2,000 from their account to be transferred to another account. They provide their account number, name, and contact email for the transaction.
+Correctly categorized: True
+--------------------------------------------------
+Email: I forgot my password and now I'm stuck in a loop. Help! Regards, Alex.
+Masked: I forgot my password and now I'm stuck in a loop. Help! <PERSON>, <PERSON>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is having trouble accessing their account due to a forgotten password and is seeking assistance.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, could you provide me with a mini statement for my account? My account number is 741852963 and my name is Mia Wilcox. You can email it to miawilcox@outlook.com.
+Masked: Hi, could you provide me with a mini statement for my account? My account number is <US_BANK_NUMBER> and my name is <PERSON>. You can email it to <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is requesting a mini statement for their account. They have provided their account number, name, and email address for the response.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I would like to open a joint account with my spouse. Our names are John and Jane Dean. Initial deposit: $50,000. John’s phone: 456-789-1230, Jane’s phone: 456-789-1231.
+Masked: Hello, I would like to open a joint account with my spouse. Our names are <PERSON> and <PERSON>. Initial deposit: $50,000. <PERSON>’s phone: 456-789-1230, <PERSON>’s phone: 456-789-1231.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The sender wishes to open a joint account with their spouse, with an initial deposit of $50,000. They have provided both names and phone numbers for contact.
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Support, I need to update my phone number in your records. My account number is 6547291, name: Leo King. New phone number is (234) 678-8901.
+Masked: Dear Support, I need to update my phone number in your records. My account number is <US_DRIVER_LICENSE>, name: <PERSON>. New phone number is <PHONE_NUMBER>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The sender is requesting to update the phone number associated with their account. They have provided their account number, name, and the new phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I'd like to make a deposit of $10,000 into my savings account. My account number is 22446688, name: Martha Zane. Email me at marthaz@gmail.com for confirmation.
+Masked: Hi, I'd like to make a deposit of $10,000 into my savings account. My account number is <US_BANK_NUMBER>, name: <PERSON>. Email me at <EMAIL_ADDRESS> for confirmation.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The sender wants to deposit $10,000 into their savings account and has provided their account number, name, and email address for confirmation.
+Correctly categorized: True
+--------------------------------------------------
+Email: The quick brown fox jumps over the lazy dog. Regards, Typist.
+Masked: The quick brown fox jumps over the lazy dog. <PERSON>, Typist.
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email states that a quick brown fox jumps over a lazy dog. It is signed by <PERSON>, identified as a Typist.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, can you email me the interest rates on my current savings account? My account number is 888555333, name: Henry Roberts. Email: hroberts@yahoo.com.
+Masked: Hello, can you email me the interest rates on my current savings account? My account number is <AU_ACN>, name: <PERSON>. Email: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The email is a request for the interest rates on the sender's current savings account. The sender has provided their account number, name, and email address for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I'm looking to open a fixed deposit account. For Edwin Lawrence, SSN: 531-33-1784. My phone number is (321) 987-6543. Thank you.
+Masked: Hi, I'm looking to open a fixed deposit account. For <PERSON>, SSN: <US_SSN>. My phone number is <PHONE_NUMBER>. Thank you.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The email author is requesting to open a fixed deposit account for the person identified by their SSN. They also provided their phone number for contact.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to change the beneficiary on my account. Current beneficiary: Rebecca Jones, new beneficiary: Robert Jones. Account number: 558899007. My name: Max Power.
+Masked: Hello, I need to change the beneficiary on my account. Current beneficiary: <PERSON>, new beneficiary: <PERSON>. Account number: <US_BANK_NUMBER>. My name: <PERSON>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The email is a request to change the beneficiary on an account. It includes the current beneficiary's name, the new beneficiary's name, the account number, and the sender's name.
+Correctly categorized: True
+--------------------------------------------------
+Email: Can you please transfer $500 from my account to account number 3344556677? My account number is 111222333 and my name is Oliver Twist. Email: otwist@gmail.com.
+Masked: Can you please transfer $500 from my account to account number <PHONE_NUMBER>? My account number is <US_BANK_NUMBER> and my name is <PERSON>. Email: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email requests a transfer of $500 from the sender's account, specifying their account number and name, to another account identified by a placeholder for a phone number. The email also includes the sender's email address.
+Correctly categorized: True
+--------------------------------------------------
+Email: Yesterday is history, tomorrow is a mystery, today is a gift. Best, Wise One.
+Masked: Yesterday is history, tomorrow is a mystery, today is a gift. Best, Wise One.
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email conveys a motivational message emphasizing the importance of the present moment. It suggests that while the past is unchangeable and the future uncertain, today should be treasured. It is signed off by "Wise One."
+Correctly categorized: True
+--------------------------------------------------
+Correctly categorized 100.0% emails.
+datamask-exmike@BADDERBOY2:~/repos/datamask-ex$ /home/mike/.local/share/virtualenvs/datamask-ex-clmAkpan/bin/python /home/mike/repos/datamask-ex/replaceanon.py
+Supported entities: ['PERSON', 'ORGANIZATION', 'EMAIL_ADDRESS', 'CREDIT_CARD', 'US_SSN', 'AU_ABN', 'IN_AADHAAR', 'US_DRIVER_LICENSE', 'US_PASSPORT', 'AU_TFN', 'US_BANK_NUMBER', 'EMAIL', 'PHONE_NUMBER', 'IN_PAN', 'URL', 'CRYPTO', 'AU_ACN']
+--------------------------------------------------
+Email: Hello, I would like to know the recent transactions on my account. My account number is 6543210-0 and my name is Sarah Green. You can contact me at sarahg@yahoo.com or (444) 678-1234.
+Masked: Hello, I would like to know the recent transactions on my account. My account number is <US_DRIVER_LICENSE>-0 and my name is <PERSON>. You can contact me at <EMAIL_ADDRESS> or <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: In the email, the sender is requesting information about recent transactions on their account. They provide their account number and name, and include contact details for further communication.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi there, I am interested in opening a savings account with your bank. My name is Tom Hanks and my social security number is 321-54-6789. Please let me know the initial deposit requirements. My phone number is (311) 567-8976.
+Masked: Hi there, I am <IN_PAN> in opening a savings account with your bank. My name is <PERSON> and my social security number is <US_SSN>. Please let me know the initial deposit requirements. My phone number is (311) 567-8976.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: Hi, 
+
+I am interested in opening a savings account at your bank. My name is [Name] and my social security number is [SSN]. Please inform me of the initial deposit requirements. My phone number is (311) 567-8976.
+
+Thank you.
+Correctly categorized: True
+--------------------------------------------------
+Email: Good day, I wish to update my contact information. My current email is janetdoe@gmail.com and I would like to change it to janetdonew@gmail.com. My account number is 789123450.
+Masked: Good day, I wish to update my contact information. My current email is <EMAIL_ADDRESS> and I would like to change it to <EMAIL_ADDRESS>. My account number is <AU_TFN>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The sender of the email wishes to update their contact information. They would like to change their current email address to a new one and have provided their account number for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Greetings, I would like to deposit $5,000 into my account. My account number is 11235813 and my name is Fibonacci Sequence. I can be reached at fibonaccis@math.com, phone (555) 123-9876.
+Masked: Greetings, I would like to deposit $5,000 into my account. My account number is <US_BANK_NUMBER> and my name is Fibonacci Sequence. I can be reached at <EMAIL_ADDRESS>, phone <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email is a request to deposit $5,000 into the sender's account. The sender provides their account number, name (Fibonacci Sequence), and contact information, including email and phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Can you tell me why the sky is blue? Regards, Charlie.
+Masked: Can you tell me why the sky is blue? <PERSON>, <PERSON>.
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email is asking for an explanation of why the sky appears blue, addressed to two individuals.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to know the available balance in my checking account. My account number is 1357911 and my name is Toby Fox. You can send the details to tobyf@undertale.com.
+Masked: Hello, I need to know the available balance in my checking account. My account number is <US_DRIVER_LICENSE> and my name is <PERSON>. You can send the details to <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is requesting their checking account balance and has provided their account number, name, and an email address for the response.
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Bank, I want to open a business account for my startup. Name: Code Solutions LLC, initial deposit: $150,000. Contact person: Emily Blunt, SSN: 234-56-7890, Phone: 888-654-3210.
+Masked: Dear Bank, I want to open a business account for my startup. Name: Code Solutions LLC, initial deposit: $150,000. Contact person: <PERSON>, SSN: <US_SSN>, Phone: <PHONE_NUMBER>.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The sender is requesting to open a business account for their startup, Code Solutions LLC, with an initial deposit of $150,000. They provided contact details including a representative's name, Social Security Number, and phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: To whom it may concern, I have moved to a new address and need to update my information. My account number is 908171614 and my name is Amanda G. New address: 1234 Elm Street, Springfield. My phone is 999-876-5432.
+Masked: To whom it may concern, I have moved to a new address and need to update my information. My account number is <US_BANK_NUMBER> and my name is <PERSON> address: 1234 Elm Street, Springfield. My phone is <PHONE_NUMBER>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The person is notifying the recipient of a change in their address and requesting an update to their information. They provide their account number, name, new address (1234 Elm Street, Springfield), and phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Good morning, please withdraw $2,000 from my account and transfer it to account number 1122334455. My account number is 99887766 and my name is Samuel Chase. Contact: samchase@finance.com.
+Masked: Good morning, please withdraw $2,000 from my account and transfer it to account number <PHONE_NUMBER>. My account number is <US_BANK_NUMBER> and my name is <PERSON>. Contact: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The sender is requesting a $2,000 withdrawal from their account to be transferred to a specified account. They have provided their account number and contact details for further communication.
+Correctly categorized: True
+--------------------------------------------------
+Email: I forgot my password and now I'm stuck in a loop. Help! Regards, Alex.
+Masked: I forgot my password and now I'm stuck in a loop. Help! <PERSON>, <PERSON>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is unable to access their account because they forgot their password and are experiencing repeated issues trying to resolve it. They are asking for assistance.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, could you provide me with a mini statement for my account? My account number is 741852963 and my name is Mia Wilcox. You can email it to miawilcox@outlook.com.
+Masked: Hi, could you provide me with a mini statement for my account? My account number is <US_BANK_NUMBER> and my name is <PERSON>. You can email it to <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is requesting a mini statement for their account and has provided their account number, name, and email address for sending the statement.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I would like to open a joint account with my spouse. Our names are John and Jane Dean. Initial deposit: $50,000. John’s phone: 456-789-1230, Jane’s phone: 456-789-1231.
+Masked: Hello, I would like to open a joint account with my spouse. Our names are <PERSON> and <PERSON>. Initial deposit: $50,000. <PERSON>’s phone: 456-789-1230, <PERSON>’s phone: 456-789-1231.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The email expresses a request to open a joint account for two individuals, specifying a $50,000 initial deposit. It includes the names of both individuals and their respective phone numbers, which are 456-789-1230 and 456-789-1231.
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Support, I need to update my phone number in your records. My account number is 6547291, name: Leo King. New phone number is (234) 678-8901.
+Masked: Dear Support, I need to update my phone number in your records. My account number is <US_DRIVER_LICENSE>, name: <PERSON>. New phone number is <PHONE_NUMBER>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The email is a request to update the phone number linked to an account. The sender provides their account number, name, and the new phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I'd like to make a deposit of $10,000 into my savings account. My account number is 22446688, name: Martha Zane. Email me at marthaz@gmail.com for confirmation.
+Masked: Hi, I'd like to make a deposit of $10,000 into my savings account. My account number is <US_BANK_NUMBER>, name: <PERSON>. Email me at <EMAIL_ADDRESS> for confirmation.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email is a request to deposit $10,000 into the sender's savings account. The sender provides their account number, name, and asks for a confirmation email.
+Correctly categorized: True
+--------------------------------------------------
+Email: The quick brown fox jumps over the lazy dog. Regards, Typist.
+Masked: The quick brown fox jumps over the lazy dog. <PERSON>, Typist.
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: A typist named <PERSON> has written a brief email containing the sentence: "The quick brown fox jumps over the lazy dog."
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, can you email me the interest rates on my current savings account? My account number is 888555333, name: Henry Roberts. Email: hroberts@yahoo.com.
+Masked: Hello, can you email me the interest rates on my current savings account? My account number is <AU_ACN>, name: <PERSON>. Email: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is requesting the interest rates for their current savings account. They have provided their account number, name, and email address for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I'm looking to open a fixed deposit account. For Edwin Lawrence, SSN: 531-33-1784. My phone number is (321) 987-6543. Thank you.
+Masked: Hi, I'm looking to open a fixed deposit account. For <PERSON>, SSN: <US_SSN>. My phone number is <PHONE_NUMBER>. Thank you.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The email is from a person inquiring about opening a fixed deposit account. They provide the name of the account holder, their Social Security Number, and a contact phone number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to change the beneficiary on my account. Current beneficiary: Rebecca Jones, new beneficiary: Robert Jones. Account number: 558899007. My name: Max Power.
+Masked: Hello, I need to change the beneficiary on my account. Current beneficiary: <PERSON>, new beneficiary: <PERSON>. Account number: <US_BANK_NUMBER>. My name: <PERSON>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The email is a request to change the beneficiary on an account. It includes the current and new beneficiary names, the account number, and the sender's name.
+Correctly categorized: True
+--------------------------------------------------
+Email: Can you please transfer $500 from my account to account number 3344556677? My account number is 111222333 and my name is Oliver Twist. Email: otwist@gmail.com.
+Masked: Can you please transfer $500 from my account to account number <PHONE_NUMBER>? My account number is <US_BANK_NUMBER> and my name is <PERSON>. Email: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email is requesting a transfer of $500 from the sender's account to another specified account, providing both account numbers and the sender's name and email address for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Yesterday is history, tomorrow is a mystery, today is a gift. Best, Wise One.
+Masked: Yesterday is history, tomorrow is a mystery, today is a gift. Best, Wise One.
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email conveys a reflective message emphasizing the importance of the present moment by stating that the past is done, the future is unknown, and today is a valuable gift. It is signed by "Wise One."
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to know the recent transactions on my account number 88222333. My name is Sarah Perkins, email sarahp@gmail.com, and phone number (407) 555-7890.
+Masked: Hello, I need to know the recent transactions on my account number <US_BANK_NUMBER>. My name is <PERSON>, email <EMAIL_ADDRESS>, and phone number <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The email is a request for recent transaction details on a specific bank account. The sender has provided their name, email address, and phone number for further contact.
+Correctly categorized: True
+--------------------------------------------------
+Email: Greetings, I am interested in opening a new savings account. My name is Paul Simmons, SSN 234-56-7890, and my contact number is (315) 555-6543.
+Masked: Greetings, I am <IN_PAN> in opening a new savings account. My name is <PERSON>, SSN <US_SSN>, and my contact number is <PHONE_NUMBER>.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The sender is expressing interest in opening a new savings account. They have provided their name, Social Security Number, and contact number.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I recently moved and need to update my address to 123 Maple St, Seattle, WA 98101. My account number is 7654321, and my name is Alice Johnson.
+Masked: Hi, I recently moved and need to update my address to 123 Maple St, Seattle, WA 98101. My account number is <US_DRIVER_LICENSE>, and my name is <PERSON>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The sender has recently moved and needs to update their address to 123 Maple St, Seattle, WA 98101. They provided their account number (<US_DRIVER_LICENSE>) and their name (<PERSON>).
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Bank, I would like to deposit $5,000 into my account. Account number 567890123, Name: Mark Davis, email: mdavis@mail.com, phone: (614) 555-9987.
+Masked: Dear Bank, I would like to deposit $5,000 into my account. Account number <US_BANK_NUMBER>, Name: <PERSON>, email: <EMAIL_ADDRESS>, phone: <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The sender wants to deposit $5,000 into their account and provides their account number, name, email address, and phone number for the transaction.
+Correctly categorized: True
+--------------------------------------------------
+Email: Can you help me decode the mysterious message in my dreams?
+Masked: Can you help me decode the mysterious message in my dreams?
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: Sure! The email sender is asking for assistance in interpreting a mysterious message they have encountered in their dreams.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, Can you provide the current balance for account number 11223344? My name is James Trent, and my contact email is jtrent123@gmail.com. Phone: (503) 555-3838.
+Masked: Hi, Can you provide the current balance for account number <US_BANK_NUMBER>? My name is <PERSON>, and my contact email is <EMAIL_ADDRESS>. Phone: <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The email requests the current balance for a specific account number. The sender provides their name, contact email, and phone number for further communication.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to open a new business account for my company. My name is Laura Kingsley, SSN 321-54-6789, and phone number (408) 555-1215.
+Masked: Hello, I need to open a new business account for my company. My name is <PERSON>, SSN <US_SSN>, and phone number <PHONE_NUMBER>.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: Hello,
+
+I need to open a new business account for my company. Here are my details: 
+- Name: <PERSON>
+- SSN: <US_SSN>
+- Phone Number: <PHONE_NUMBER>
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Support, I need to update my contact email to newemail@provider.com. My current email is myoldemail@provider.com, and my account number is 123789456. Name: Clara Ruiz.
+Masked: Dear Support, I need to update my contact email to <EMAIL_ADDRESS>. My current email is <EMAIL_ADDRESS>, and my account number is <AU_TFN>. Name: <PERSON>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The email is a request to update the contact email address for an account. The sender provides both the current and new email addresses, along with their account number and name for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to transfer $10,000 from my account number 987654321 to account number 123456789. My name is Jason Gray, email jasong@mail.com, phone (206) 555-1212.
+Masked: Hello, I need to transfer $10,000 from my account number <US_BANK_NUMBER> to account number <US_BANK_NUMBER>. My name is <PERSON>, email <EMAIL_ADDRESS>, phone <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email is a request to transfer $10,000 between two specified bank accounts. The sender provides their name, email address, and phone number for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Why does the sun rise in the east and set in the west, eh?
+Masked: Why does the sun rise in the east and set in the west, eh?
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email inquires about the reason behind the sun rising in the east and setting in the west.
+Correctly categorized: True
+--------------------------------------------------
+Email: Dear Sir/Madam, Could you please confirm the current interest rate on my savings account? My account number is 456789123, and my name is Emma Clark. Contact email is eclark@mail.com.
+Masked: Dear Sir/Madam, Could you please confirm the current interest rate on my savings account? My account number is <US_BANK_NUMBER>, and my name is <PERSON>. Contact email is <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The email requests confirmation of the current interest rate for a savings account. The sender provides their account number, name, and contact email for follow-up.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I'm interested in setting up a joint account with my spouse. Our names are Robert and Julia Turner, and our social security numbers are 789-45-1234 and 789-45-6789. Phone (206) 555-6789.
+Masked: Hi, I'm <IN_PAN> in setting up a joint account with my spouse. Our names are <PERSON> and <PERSON>, and our social security numbers are <US_SSN> and <US_SSN>. Phone <PHONE_NUMBER>.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The email sender, <IN_PAN>, is requesting assistance in setting up a joint account with their spouse. They have provided their names, social security numbers, and a phone number for contact.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to change my phone number to (408) 555-4545. My account number is 654321098, and my name is David Brown. Thanks.
+Masked: Hello, I need to change my phone number to <PHONE_NUMBER>. My account number is <AU_ACN>, and my name is <PERSON>. Thanks.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The sender is requesting to change their phone number to the specified <PHONE_NUMBER>. They have provided their account number, <AU_ACN>, and their name, <PERSON>.
+Correctly categorized: True
+--------------------------------------------------
+Email: I would like to withdraw $200 from my checking account. Account number: 2233445566. Name: Grace Lee. Email: gracelee@mail.com.
+Masked: I would like to withdraw $200 from my checking account. Account number: <PHONE_NUMBER>. Name: <PERSON>. Email: <EMAIL_ADDRESS>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: The email requests a withdrawal of $200 from a checking account. The sender includes their account number, name, and email address.
+Correctly categorized: True
+--------------------------------------------------
+Email: Is it possible to travel faster than light?
+Masked: Is it possible to travel faster than light?
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email is asking whether it is possible to travel faster than the speed of light.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hi, I need a detailed statement of all transactions for October for account number 9988776655. My name is Michael Jordan, email mjordan@gmail.com, phone (408) 555-7890.
+Masked: Hi, I need a detailed statement of all transactions for October for account number <PHONE_NUMBER>. My name is <PERSON>, email <EMAIL_ADDRESS>, phone <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_INFORMATION
+Actual Category: ACCOUNT_INFORMATION
+Summarized email: The sender is requesting a detailed statement of all transactions for October for a specific account. The sender's name, email address, and phone number are also provided.
+Correctly categorized: True
+--------------------------------------------------
+Email: Greetings, I'd like to open a new account with an initial deposit of $50,000. My name is Tina Roberts, SSN 555-55-5555, and phone (315) 555-4321.
+Masked: Greetings, I'd like to open a new account with an initial deposit of $50,000. My name is <PERSON>, SSN 555-55-5555, and phone <PHONE_NUMBER>.
+Analyzed Category: NEW_ACCOUNT
+Actual Category: NEW_ACCOUNT
+Summarized email: The individual is requesting to open a new account with an initial deposit of $50,000. They have provided their name, Social Security Number, and phone number for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Good Day, I would like to update the name on my account to Peter Wheeler. My current account number is 987654321, formerly known as Peter Whitman.
+Masked: Good Day, I would like to update the name on my account to <PERSON>. My current account number is <US_BANK_NUMBER>, formerly known as <PERSON>.
+Analyzed Category: UPDATE_ACCOUNT
+Actual Category: UPDATE_ACCOUNT
+Summarized email: The email requests an update to the name on the account associated with account number <US_BANK_NUMBER>, changing it from the former name to <PERSON>.
+Correctly categorized: True
+--------------------------------------------------
+Email: Hello, I need to deposit $15,000 to my account. Account number 5566778899, Name: Lisa Chen, contact email lisachen@mail.com, phone (614) 555-1122.
+Masked: Hello, I need to deposit $15,000 to my account. Account number <PHONE_NUMBER>, Name: <PERSON>, contact email <EMAIL_ADDRESS>, phone <PHONE_NUMBER>.
+Analyzed Category: ACCOUNT_TRANSACTION
+Actual Category: ACCOUNT_TRANSACTION
+Summarized email: Sure! The email is a request to deposit $15,000 into an account. The sender provides their account number, name, contact email, and phone number for reference.
+Correctly categorized: True
+--------------------------------------------------
+Email: Can cats and dogs communicate with each other?
+Masked: Can cats and dogs communicate with each other?
+Analyzed Category: UNKNOWN
+Actual Category: UNKNOWN
+Summarized email: The email is asking if cats and dogs are able to communicate with each other.
+Correctly categorized: True
+--------------------------------------------------
+Correctly categorized 40 out of 40 or 100.0% emails.

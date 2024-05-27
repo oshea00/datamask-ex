@@ -2,12 +2,21 @@ import spacy
 from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
 from openai import OpenAI
+import json
 
 # Load spaCy model
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_lg")
 
 # load openai client
 client = OpenAI()
+
+# client = OpenAI(
+#     base_url='http://localhost:11434/v1',
+#     api_key='ollama',
+# )
+
+LLM_MODEL = "gpt-3.5-turbo"
+#LLM_MODEL = "llama3"
 
 # Initialize Presidio Analyzer and Anonymizer
 analyzer = AnalyzerEngine()
@@ -24,18 +33,11 @@ def mask_pii(text):
 # Function to process text with OpenAI completions API
 def process_with_openai(text, prompt):
     messages = [{'role': 'user', 'content': f'{prompt} {text}'}]
-    response = client.chat.completions.create(model="gpt-4o", messages=messages)
+    response = client.chat.completions.create(model=LLM_MODEL, messages=messages)
     return response.choices[0].message.content
 
-example_emails = [
-"""Hi, I am writing to inquire about my account balance. My account number is 1234567-0 and my name is John Doe.
-My email is johnd@gmail.com, and my phone number is (555) 123-4567.""",
-"""Dave Edwards. My account number is SN1234567 and I'd like to withdraw all funds from my account.
-My email is johnd@gmail.com, and my phone number is (206) 555-1212.""",
-"""Hi Mark, My account number is ABN123 and I'd like to deposit 10,000 USD into my account.
-Will this trigger any CTR? My credit card is Amex 378282246310005 expiration 12/2027""",
-"""Robots are stealing my luggage Dave. Sincerely, Hal"""
-]
+example_emails_json = open('test_emails.json').read()
+example_emails = json.loads(example_emails_json)
 
 summarize_prompt = "Summarize the following email:"
 classify_prompt = """
@@ -46,20 +48,31 @@ UPDATE_ACCOUNT - Request to change information on an account, such as address, o
 ACCOUNT_TRANSACTION - Request to withdraw or deposit money or securities from an account.
 UNKNOWN - Request that does not fit into any of the above categories.
 
-Please classify the following email into one of the above categories by returning the category name.
+Please classify the following email into one of the above categories.
+Return only the category name matching the given email.
 """
 
 # print supported entities of the analyzer
 print(f'Supported entities: {entities}')
 print("--------------------------------------------------")
 
-for email_text in example_emails:
-    print("Email text:", email_text)
-    masked_email = mask_pii(email_text)
+correctly_categorized_count = 0
+
+for email in example_emails:
+    print(f"Email:", email['email_text'])
+    masked_email = mask_pii(email['email_text'])
     print("Masked:", masked_email)
-    categorized = process_with_openai(masked_email, classify_prompt)
+    raw_categorized = process_with_openai(masked_email, classify_prompt)
+    categorized = raw_categorized.split()[0].strip().upper()
     result = process_with_openai(masked_email, summarize_prompt)
-    print(f'Category: {categorized}')
+    print(f'Analyzed Category: {raw_categorized}')
+    print(f'Actual Category: {email["category"]}')
     print(f'Summarized email: {result}')
+    correctly_categorized = email['category'] == categorized
+    if correctly_categorized:
+        correctly_categorized_count += 1
+    print(f'Correctly categorized: {correctly_categorized}')
     print("--------------------------------------------------")
+
+print(f'Correctly categorized {correctly_categorized_count} out of {len(example_emails)} or {100*correctly_categorized_count/len(example_emails)}% emails.')
 

@@ -1,0 +1,5 @@
+ACCOUNT_INFORMATION - Hi, I am writing to inquire about my account balance. My account number is 1234567-0 and my name is John Doe. My email is johnd@gmail.com, and my phone number is (555) 123-4567.
+NEW_ACCOUNT - We are needing to setup an account for our latest client, Harold Spanner, SSN 123-65-4323, and phone (253) 555-1212. He would like to make an initial deposit of $100,000
+UPDATE_ACCOUNT - Dear Chase Bank, I have recently gotten married. and would like to change the name on my checking account to Mary Free. My account number is 987651234, and my phone is 1-253-898-1234.
+ACCOUNT_TRANSACTION - Dave Edwards. My account number is SN1234567 and I'd like to withdraw all funds from my account. My email is johnd@gmail.com, and my phone number is (206) 555-1212.
+UNKNOWN - Robots are stealing my luggage Dave. Sincerely, Hal.

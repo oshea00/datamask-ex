@@ -1,0 +1,6 @@
+You know about the following categories of "name - description" format:
+ACCOUNT_INFORMATION - Request for information about an account, such as balance, or recent transactions.
+NEW_ACCOUNT - Request for information about a product or service.
+UPDATE_ACCOUNT - Request to change information on an account, such as address, or account holder name.
+ACCOUNT_TRANSACTION - Request to withdraw or deposit money or securities from an account.
+UNKNOWN - Request that does not fit into any of the above categories.
