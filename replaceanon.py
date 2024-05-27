@@ -49,7 +49,7 @@ ACCOUNT_TRANSACTION - Request to withdraw or deposit money or securities from an
 UNKNOWN - Request that does not fit into any of the above categories.
 
 Please classify the following email into one of the above categories.
-Return only the category name matching the given email.
+Return only the category name matching the given email:
 """
 
 # print supported entities of the analyzer
