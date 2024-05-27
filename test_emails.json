@@ -36,8 +36,8 @@
     "email_text": "Good morning, please withdraw $2,000 from my account and transfer it to account number 1122334455. My account number is 99887766 and my name is Samuel Chase. Contact: samchase@finance.com."
   },
   {
-    "category": "UNKNOWN",
-    "email_text": "I forgot my password and now I'm stuck in a loop. Help! Regards, Alex."
+    "category": "ACCOUNT_INFORMATION",
+    "email_text": "I forgot my password and now I'm need help accessing my account. Help! Regards, Alex."
   },
   {
     "category": "ACCOUNT_INFORMATION",

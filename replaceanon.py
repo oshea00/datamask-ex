@@ -33,7 +33,11 @@ def mask_pii(text):
 # Function to process text with OpenAI completions API
 def process_with_openai(text, prompt):
     messages = [{'role': 'user', 'content': f'{prompt} {text}'}]
-    response = client.chat.completions.create(model=LLM_MODEL, messages=messages)
+    response = client.chat.completions.create(
+        model=LLM_MODEL, 
+        messages=messages,
+        temperature=0.0
+    )
     return response.choices[0].message.content
 
 example_emails_json = open('test_emails.json').read()
