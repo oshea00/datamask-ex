@@ -15,7 +15,7 @@ client = OpenAI()
 #     api_key='ollama',
 # )
 
-LLM_MODEL = "gpt-3.5-turbo"
+LLM_MODEL = "gpt-4o"
 #LLM_MODEL = "llama3"
 
 # Initialize Presidio Analyzer and Anonymizer
