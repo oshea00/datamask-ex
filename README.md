@@ -38,7 +38,7 @@ I thought it would be interesting to compare the performance of other models usi
 The outputs of these experiments are here:
 * ```test_gpt4o_output.txt``` - 100% accuracy
 * ```test_gpt35turbo_output.txt``` - 100% accuracy
-* ```test_llama3_output.txt``` - 85% accuracy
+* ```test_llama3_output.txt``` - 92.5% accuracy
 * ```test_phi3_output.txt``` - 82.5% accuracy
 
 Gpt-4o and Gpt-3.5-Turbo are, of course, very accurate compared to the smaller Llama3 and Phi3 models. Gpt-4o is faster. These smaller models have a difficult time with the "catch-all" categorization of UNKNOWN, and they tend to treat these cases as a NEW_ACCOUNT request. Also, they tend to ignore the
