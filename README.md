@@ -1,5 +1,5 @@
 # Anonymizing via Data Masking
-This example shows how to anonymize text before passing to an LLM Model. I run testing against **Gpt-4o**, **Gpt-3.5 Turbo**, **Llama3 8B** and **Phi3 7B** 
+This example shows how to anonymize text before passing to an LLM Model. I run testing against **Gpt-4o**, **Gpt-3.5 Turbo**, **Llama3 8B** and **Phi3 3B** 
 
 The anonymization example uses the [Microsoft Presidio](https://microsoft.github.io/presidio/)
 open-source framework for masking personal identifiable information (PII). It also checks to see if the
